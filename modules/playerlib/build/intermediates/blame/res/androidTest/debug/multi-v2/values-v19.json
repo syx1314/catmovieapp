@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\javacatmovieapp\\talentmov-master\\modules\\playerlib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\GalleryPick-1.2.1.aar\\4f15285cd1547abbbdc7febe4d2afdab\\res\\values-v19\\values-v19.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "255"
+                    }
+                }
+            ]
+        }
+    ]
+}

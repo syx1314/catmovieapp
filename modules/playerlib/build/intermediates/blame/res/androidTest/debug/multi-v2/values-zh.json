@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "F:\\javacatmovieapp\\talentmov-master\\modules\\playerlib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\xrecyclerview-1.5.9.aar\\a5d753a6c841cdc07aa4dd52f270689d\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,116,180,242,295,341,388,434",
+                        "endColumns": "60,63,61,52,45,46,45,46",
+                        "endOffsets": "111,175,237,290,336,383,429,476"
+                    }
+                },
+                {
+                    "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\f66523492a828403a5d315940eb75c25\\res\\values-zh\\values-zh.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,109,163",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "104,158,205"
+                    },
+                    "to": {
+                        "startLines": "10,11,12",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "481,535,589",
+                        "endColumns": "53,53,46",
+                        "endOffsets": "530,584,631"
+                    }
+                }
+            ]
+        }
+    ]
+}

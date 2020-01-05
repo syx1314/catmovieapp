@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="4dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="135dp">
+
+        <ImageView
+            android:id="@+id/post_img"
+            android:layout_width="110dp"
+            android:layout_height="135dp"
+            android:scaleType="centerCrop"
+            tools:background="#00BFA5" />
+        <TextView
+            android:id="@+id/item_update_tag"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/ic_biaoqian"
+            android:gravity="top|center_horizontal"
+            android:text="新"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:visibility="invisible"
+            tools:visibility="visible" />
+        <TextView
+            android:id="@+id/update_seri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/remark_shape_left_radius"
+            android:ellipsize="end"
+            android:padding="2dp"
+            android:gravity="center"
+            android:maxLines="1"
+            tools:text="更新至111"
+            android:textColor="#F3F1F1"
+            android:textSize="10sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@id/post_img"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_toRightOf="@+id/post_img"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/post_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="bottom"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:text="电影名字"
+                android:textColor="#353535"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+
+            <TextView
+                android:id="@+id/up_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/post_title"
+                android:layout_toRightOf="@+id/post_img"
+                android:textColor="#666666"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:textSize="12sp"
+                tools:text="2018-5-9上映" />
+            <TextView
+                android:id="@+id/vod_time_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_toRightOf="@+id/post_img"
+                android:textColor="#666666"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginLeft="-4dp"
+                android:gravity="center_vertical"
+                android:drawablePadding="@dimen/dp_4"
+                android:textSize="12sp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:drawableLeft="@drawable/mobile"
+                tools:text="已观看至 22：21" />
+            <TextView
+                android:id="@+id/vod_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:ellipsize="end"
+                android:layout_marginTop="@dimen/dp_4"
+                android:textColor="#999999"
+                android:textSize="11sp"
+                tools:text="简介：哈哈哈哈哈哈哈哈" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
