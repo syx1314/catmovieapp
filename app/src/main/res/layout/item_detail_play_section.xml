@@ -12,6 +12,9 @@
         android:text="默认线路"
         android:id="@+id/play_res"
         android:textSize="14sp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+
         android:gravity="center_vertical"
         android:includeFontPadding="false"
         android:drawablePadding="@dimen/dp_4"
