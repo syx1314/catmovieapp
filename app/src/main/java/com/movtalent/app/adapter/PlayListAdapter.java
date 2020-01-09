@@ -43,7 +43,9 @@ public class PlayListAdapter extends RecyclerView.Adapter<PlayItemHolder> {
         if (playItemHolder.index == null) {
             return;
         }
-        playItemHolder.index.setText((i + 1) + "");
+//        playItemHolder.index.setText((i + 1) + "");
+        playItemHolder.index.setText(urls.get(i).getTitle());
+        playItemHolder.textView.setText(urls.get(i).getPlayUrl());
         playItemHolder.itemView.setOnClickListener(v -> {
             if (clickListener != null) {
                 clickListener.switchPlay(urls.get(i).getPlayUrl(), i, groupPlay);

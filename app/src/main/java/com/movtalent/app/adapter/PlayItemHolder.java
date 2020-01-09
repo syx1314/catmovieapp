@@ -16,9 +16,11 @@ public class PlayItemHolder extends RecyclerView.ViewHolder {
 
 
     public TextView index;
+    public TextView textView;
 
     public PlayItemHolder(@NonNull View itemView) {
         super(itemView);
         index = itemView.findViewById(R.id.play_squre_index);
+        textView = itemView.findViewById(R.id.tv_extra);
     }
 }

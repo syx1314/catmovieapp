@@ -59,10 +59,12 @@ public class DetailPlaySectionViewBinder extends ItemViewBinder<DetailPlaySectio
                         new OnSelectListener() {
                             @Override
                             public void onSelect(int position, String text) {
+                                holder.playRes.setText("切换线路："+from[position]);
                                 holder.setData(holder.itemView.getContext(),
                                         movPlayUrlList.get(position), detailPlaySection.getClickListener(), detailPlaySection.getGroupPlay());
                                 detailPlaySection.getClickListener().switchPlay(movPlayUrlList.get(position).get(GlobalDATA.PLAY_INDEX).getPlayUrl(), GlobalDATA.PLAY_INDEX,position);
-                                getAdapter().notifyDataSetChanged();
+                                //刷新导致bug 所以去掉
+//                                getAdapter().notifyDataSetChanged();
                                 detailPlaySection.setGroupPlay(position);
                             }
                         });
@@ -86,6 +88,7 @@ public class DetailPlaySectionViewBinder extends ItemViewBinder<DetailPlaySectio
         }
 
         public void setData(Context context, ArrayList<VideoVo> videoVos, OnSeriClickListener clickListener, int groupPlay) {
+            playList.setAdapter(null);
             PlayListAdapter playListAdapter = new PlayListAdapter(videoVos, clickListener,groupPlay);
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
             linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);

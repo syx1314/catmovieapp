@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:paddingTop="10dp"
         android:id="@+id/video_container"
-        android:layout_height="250dp"/>
+        android:layout_height="300dp"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/detail_content"
         android:layout_below="@+id/video_container"
