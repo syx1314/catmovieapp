@@ -1,8 +1,10 @@
 package com.movtalent.app;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
@@ -10,6 +12,7 @@ import android.widget.Toast;
 import com.media.playerlib.PlayApp;
 import com.movtalent.app.util.MapBuilder;
 import com.simple.spiderman.SpiderMan;
+import com.tencent.smtt.sdk.QbSdk;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
@@ -46,6 +49,7 @@ public class App extends Application {
         context = this;
         //放在其他库初始化前
         SpiderMan.init(this).setTheme(R.style.SpiderManTheme_Dark);
+        registerActivityLifecycleCallbacks(callbacks);
         //初始化友盟统计、推送
         //初始化友盟统计
         UMConfigure.init(this, App_Config.UMENKEY, App_Config.UMEN_APP_NAME, UMConfigure.DEVICE_TYPE_PHONE, App_Config.UMEN_PUSH_KEY);
@@ -94,7 +98,62 @@ public class App extends Application {
                             WeiXinPlatform.class)
             );
         }
+        //搜集本地tbs内核信息并上报服务器，服务器返回结果决定使用哪个内核。
+        QbSdk.PreInitCallback cb = new QbSdk.PreInitCallback() {
+            @Override
+            public void onViewInitFinished(boolean arg0) {
+                // TODO Auto-generated method stub
+                //x5內核初始化完成的回调，为true表示x5内核加载成功，否则表示x5内核加载失败，会自动切换到系统内核。
+                Log.e("app", " X5内核 onViewInitFinished is " + arg0);
+            }
+            @Override
+            public void onCoreInitFinished() {
+                // TODO Auto-generated method stub
+            }
+        };
+        //x5内核初始化接口
+        try {
+            QbSdk.initX5Environment(this, cb);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+    private ActivityLifecycleCallbacks callbacks=new ActivityLifecycleCallbacks() {
+        @Override
+        public void onActivityCreated(Activity activity, Bundle bundle) {
+            Log.e("当前页面---->",activity.getClass().toString());
+        }
+
+        @Override
+        public void onActivityStarted(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityResumed(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityPaused(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityStopped(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivitySaveInstanceState(Activity activity, Bundle bundle) {
+
+        }
+
+        @Override
+        public void onActivityDestroyed(Activity activity) {
+
+        }
+    };
 
     /**
      * 判断当前进程是否是主进程，而不是推送等 service 所在的 remote 进程

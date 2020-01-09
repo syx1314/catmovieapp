@@ -142,4 +142,6 @@ dependencies {
     implementation('com.karumi:dexter:4.2.0', {
         exclude group: 'com.android.support'
     })
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.0-RC1'
+    compile 'com.tencent.tbs.tbssdk:sdk:43697'
 }

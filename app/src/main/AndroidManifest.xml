@@ -2,88 +2,94 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.movtalent.app">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ticon2"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.UserProfileActivity"
-            android:screenOrientation="portrait"
-            ></activity>
-
+        <activity
+            android:name=".view.UserProfileActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
-            android:screenOrientation="portrait"
-            ></activity>
-
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashActivity"
-            android:theme="@style/Theme.TransparentA"
             android:screenOrientation="portrait"
-            >
+            android:theme="@style/Theme.TransparentA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.AllLevelActivity"
-            android:screenOrientation="portrait"
-            />
-
-        <activity android:name=".view.CoinShopActivity"
-            android:screenOrientation="portrait"
-            /> <!-- 趣米的广告结束 -->
-        <activity android:name=".view.WebDetailActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.ReQuestFilmActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.ReportActivitys"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.AllDownLoadActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.SettingActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.LoginActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.RegistActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.AllHistoryActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.AllFavorActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.AboutUsActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.SearchActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.CastDescriptionnActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".view.AllSubjectActivity"
-            android:screenOrientation="portrait"
-            />
-        <activity android:name=".category.CategoryActivity"
-            android:screenOrientation="portrait"
-            />
+        <activity
+            android:name=".view.AllLevelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.CoinShopActivity"
+            android:screenOrientation="portrait" /> <!-- 趣米的广告结束 -->
+        <activity
+            android:name=".view.WebDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ReQuestFilmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.ReportActivitys"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.AllDownLoadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.RegistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.AllHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.AllFavorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.CastDescriptionnActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.AllSubjectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.CategoryActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".view.OnlineDetailPageActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.TransparentA" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}"
@@ -97,15 +103,9 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
-    </application>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
+        <activity android:name=".view.WebPlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"></activity>
+    </application>
 
 </manifest>

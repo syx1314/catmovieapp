@@ -14,6 +14,21 @@
                     }
                 }
             ]
+        },
+        {
+            "outputFile": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-en-rUS\\values-en-rUS.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appupdate-2.4.0.aar\\30ab09b2f2db2acc2c1c38ebc466d4c9\\res\\values-en-rUS\\values-en-rUS.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,149,205,284,362,427,493,551,620,693,783,883,941,1031,1101",
+                        "endColumns": "93,55,78,77,64,65,57,68,72,89,99,57,89,69,41",
+                        "endOffsets": "144,200,279,357,422,488,546,615,688,778,878,936,1026,1096,1138"
+                    }
+                }
+            ]
         }
     ]
 }

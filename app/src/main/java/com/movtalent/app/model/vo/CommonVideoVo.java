@@ -25,6 +25,8 @@ public class CommonVideoVo {
     private String movName;
     private String movDesc;
     private String movPoster;
+    //bannder 大图 长途
+    private String bannderMovPoster;
     private String movUpdateTime;
     private String movId;
     private int movTypeId;
@@ -33,7 +35,8 @@ public class CommonVideoVo {
     private String movActor;
     private String movArea;
     private String movYear;
-
+    private String vodPlayFrom;
+    private int index;
     public String getVodPlayFrom() {
         return vodPlayFrom;
     }
@@ -42,8 +45,7 @@ public class CommonVideoVo {
         this.vodPlayFrom = vodPlayFrom;
     }
 
-    private String vodPlayFrom;
-    private int index;
+
 
     public int getIndex() {
         return index;
@@ -142,6 +144,22 @@ public class CommonVideoVo {
 
     }
 
+    public String getBannderMovPoster() {
+        if (TextUtils.isEmpty(bannderMovPoster)){
+            return bannderMovPoster;
+        }else {
+            String replace = bannderMovPoster.replace("mac://", "http://");
+            if (replace.startsWith("upload/")){
+                replace= App_Config.BASE_URL+replace;
+            }
+            return replace;
+        }
+    }
+
+    public void setBannderMovPoster(String bannderMovPoster) {
+        this.bannderMovPoster = bannderMovPoster;
+    }
+
     public void setMovPoster(String movPoster) {
         this.movPoster = movPoster;
     }
@@ -214,6 +232,7 @@ public class CommonVideoVo {
             videoVo.setMovId(video.getVod_id());
             videoVo.setMovTypeId(Integer.parseInt(video.getType_id()));
             videoVo.setMovPoster(video.getVod_pic());
+            videoVo.setBannderMovPoster(video.getVod_pic_slide());
             videoVo.setMovPlayUrlList(PlayUrlUtils.convertGroupPlayList(video.getVod_play_url()));
             videoVo.setMovRemark(video.getVod_remarks());
             videoVo.setMovYear(video.getVod_year());

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="F:\javacatmovieapp\talentmov-master\modules\common\src\main\assets"/><source path="F:\javacatmovieapp\talentmov-master\modules\common\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\javacatmovieapp\talentmov-master\modules\common\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="D:\catmovieappOnline\modules\common\src\main\assets"/><source path="D:\catmovieappOnline\modules\common\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\catmovieappOnline\modules\common\src\debug\assets"/></dataSet></merger>

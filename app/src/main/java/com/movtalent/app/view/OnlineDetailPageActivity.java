@@ -73,6 +73,9 @@ import com.movtalent.app.view.dialog.BottomInputSheet;
 import com.movtalent.app.view.dialog.BottomShareView;
 import com.movtalent.app.view.dialog.DetailDialogWindow;
 import com.tbruyelle.rxpermissions.RxPermissions;
+import com.tencent.smtt.sdk.WebSettings;
+import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -96,11 +99,11 @@ import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 /**
  * @author huangyong
- * createTime 2019-09-14
+ *         createTime 2019-09-14
  */
 public class OnlineDetailPageActivity extends AppCompatActivity implements IDetailView, IRecView, View.OnClickListener {
 
-    private int groupPlay=0;
+    private int groupPlay = 0;
 
     @BindView(R.id.video_container)
     FrameLayout videoContainer;
@@ -140,6 +143,8 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
             }
         }
     };
+    private boolean isWebPlayer = false;//是否挑用网络播放器
+    private WebView webView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -173,7 +178,7 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
 
         items = new ArrayList<>();
 
-        playerPresenter = new PlayerPresenter();
+
 
         detailAdapter.setItems(items);
 
@@ -234,11 +239,12 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
      * @param commonVideoVo
      */
     private void loadSeri(CommonVideoVo commonVideoVo) {
-        DetailPlaySection section = new DetailPlaySection(groupPlay,commonVideoVo, new OnSeriClickListener() {
+        DetailPlaySection section = new DetailPlaySection(groupPlay, commonVideoVo, new OnSeriClickListener() {
 
             @Override
             public void switchPlay(String url, int index, int groupIndex) {
-                playerPresenter.switchPlay(url, index);
+                initPlayer(url);
+                player(url, index);
                 groupPlay = groupIndex;
             }
 
@@ -292,25 +298,139 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
             return;
         }
 
-        int authCode = checkUserPlayAuth();
-
 
         globalVideoVo = commonVideoVo;
-        playerPresenter.initView(this, videoContainer, fullContainer, authCode);
-        VideoPlayVo videoPlayVo = new VideoPlayVo();
-        videoPlayVo.setPlayUrl(commonVideoVo.getMovPlayUrlList().get(groupPlay).get(0).getPlayUrl());
-        videoPlayVo.setVodId(Integer.parseInt(commonVideoVo.getMovId()));
-        videoPlayVo.setTitle(commonVideoVo.getMovName());
+        if (commonVideoVo.getMovPlayUrlList() != null && commonVideoVo.getMovPlayUrlList().get(groupPlay) != null) {
+            VideoVo videoVo = commonVideoVo.getMovPlayUrlList().get(groupPlay).get(0);
 
-        urls = new ArrayList<>();
-        for (int i = 0; i < commonVideoVo.getMovPlayUrlList().get(groupPlay).size(); i++) {
-            urls.add(commonVideoVo.getMovPlayUrlList().get(groupPlay).get(i).getPlayUrl());
+            String[] s = commonVideoVo.getVodPlayFrom().split("$$$");
+
+            initPlayer(videoVo.getPlayUrl());
+
+            if (playerPresenter != null) {
+                VideoPlayVo videoPlayVo = new VideoPlayVo();
+                videoPlayVo.setPlayUrl(videoVo.getPlayUrl());
+                videoPlayVo.setVodId(Integer.parseInt(commonVideoVo.getMovId()));
+                videoPlayVo.setTitle(commonVideoVo.getMovName());
+
+                urls = new ArrayList<>();
+                for (int i = 0; i < commonVideoVo.getMovPlayUrlList().get(groupPlay).size(); i++) {
+                    urls.add(commonVideoVo.getMovPlayUrlList().get(groupPlay).get(i).getPlayUrl());
+                }
+                videoPlayVo.setSeriUrls(urls);
+                playerPresenter.initData(videoPlayVo);
+                HistoryDBhelper.checkHistoryAndPlay(vodId, playSwitchListener);
+            } else {
+                if (webView != null) {
+                    player(videoVo.getPlayUrl(), 0);
+                }
+            }
         }
-        videoPlayVo.setSeriUrls(urls);
-        playerPresenter.initData(videoPlayVo);
-        playerPresenter.configOrientationSensor(this);
-        playerPresenter.setPlayListener(playListener);
-        HistoryDBhelper.checkHistoryAndPlay(vodId, playSwitchListener);
+    }
+
+    private void initPlayer(String url) {
+        if (!TextUtils.isEmpty(url) && !url.endsWith(".m3u8")) {
+            isWebPlayer = true;
+
+            initWebPlayer();
+        } else {
+            isWebPlayer=false;
+            initAndroidPlayer();
+        }
+    }
+
+    private void initAndroidPlayer() {
+        if (webView != null) {
+            webView.destroy();
+        }
+        if (playerPresenter == null) {
+            playerPresenter = new PlayerPresenter();
+            videoContainer.removeAllViews();
+            int authCode = checkUserPlayAuth();
+            playerPresenter.initView(this, videoContainer, fullContainer, authCode);
+            playerPresenter.configOrientationSensor(this);
+            playerPresenter.setPlayListener(playListener);
+        }
+    }
+
+    private void player(String url, int index) {
+        if (playerPresenter != null) {
+            playerPresenter.switchPlay(url, index);
+        } else {
+            if (webView != null) {
+                webView.loadUrl("http://jx.catmovie.cn/?v=" + url);
+            }
+        }
+    }
+
+    private void initWebPlayer() {
+
+        if (playerPresenter != null) {
+            playerPresenter.destroy();
+            playerPresenter = null;
+        }
+        if (webView == null) {
+            videoContainer.removeAllViews();
+            webView = new WebView(this);
+            initWebViewSettings(webView);
+            videoContainer.addView(webView);
+            webView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, videoContainer.getHeight()));
+        }
+    }
+
+
+    private void initWebViewSettings(WebView webview) {
+
+
+        final WebSettings webSetting = webview.getSettings();
+        webSetting.setJavaScriptEnabled(true);
+        webSetting.setDomStorageEnabled(true);
+        webSetting.setJavaScriptCanOpenWindowsAutomatically(true);
+        webSetting.setAllowFileAccess(true);
+        webSetting.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
+        webSetting.setSupportZoom(true);
+        webSetting.setBuiltInZoomControls(true);
+        webSetting.setUseWideViewPort(true);
+        webSetting.setSupportMultipleWindows(true);
+        webSetting.setLoadWithOverviewMode(true);
+        webSetting.setAppCacheEnabled(false);
+        webSetting.setDatabaseEnabled(true);
+        webSetting.setGeolocationEnabled(true);
+        webSetting.setAppCacheEnabled(true);
+        webSetting.setAppCacheMaxSize(Long.MAX_VALUE);
+        // webSetting.setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);
+        webSetting.setPluginState(WebSettings.PluginState.ON_DEMAND);
+        // webSetting.setRenderPriority(WebSettings.RenderPriority.HIGH);
+        webSetting.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        // this.getSettingsExtension().setPageCacheCapacity(IX5WebSettings.DEFAULT_CACHE_CAPACITY);//extension
+        // settings 的设计
+//        webSetting.setBlockNetworkImage(true);
+        webview.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageStarted(WebView webView, String s, Bitmap bitmap) {
+                super.onPageStarted(webView, s, bitmap);
+                webSetting.setBlockNetworkImage(true);
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+
+                Log.e("加载url-》》》》", url);
+                if (url.startsWith("http://") || url.startsWith("https://")) {
+                    view.loadUrl(url);
+                }
+
+                return true;
+            }
+
+            @Override
+            public void onPageFinished(WebView webView, String s) {
+                super.onPageFinished(webView, s);
+                webView.scrollTo(webView.getWebScrollX(), 0);
+                webSetting.setBlockNetworkImage(false);
+            }
+        });
+
     }
 
     private int checkUserPlayAuth() {
@@ -358,6 +478,10 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
         if (playerPresenter != null) {
             playerPresenter.destroy();
         }
+        if (webView != null) {
+            webView.clearCache(true);
+            webView.destroy();
+        }
         unregisterReceiver(receiver);
         super.onDestroy();
     }
@@ -383,7 +507,9 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        playerPresenter.onConfigurationChange(newConfig);
+        if (playerPresenter != null) {
+            playerPresenter.onConfigurationChange(newConfig);
+        }
     }
 
     @Override
@@ -406,7 +532,10 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
             @Override
             public void switchPlay(String url, int index, int groupIndex) {
                 Toast.makeText(OnlineDetailPageActivity.this, "即将播放第" + (index + 1) + "集", Toast.LENGTH_SHORT).show();
-                playerPresenter.switchPlay(url, index);
+
+                initPlayer(url);
+                player(url, index);
+
             }
 
             @Override
@@ -416,7 +545,7 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
         RecyclerView allList = view.findViewById(R.id.all_list);
         TextView title = view.findViewById(R.id.title);
         String[] arrName = videoVo.getVodPlayFrom().split("[$][$][$]");
-        title.setText("所有剧集（"+arrName[groupPlay]+")");
+        title.setText("所有剧集（" + arrName[groupPlay] + ")");
         ImageView close = view.findViewById(R.id.close);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 5);
         gridLayoutManager.setOrientation(GridLayoutManager.VERTICAL);
@@ -509,6 +638,7 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
     };
+
     private void showDetailSheetDialog(CommonVideoVo commonVideoVo) {
         new XPopup.Builder(this).asCustom(new DetailDialogWindow(this, commonVideoVo)).show();
     }
@@ -676,9 +806,9 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
     @Override
     public void onBackPressed() {
 
-        if (playerPresenter!=null && playerPresenter.getIsLandscape()){
+        if (playerPresenter != null && playerPresenter.getIsLandscape()) {
             playerPresenter.onBackPress();
-        }else {
+        } else {
             super.onBackPressed();
         }
     }

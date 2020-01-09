@@ -2,6 +2,7 @@ package com.media.playerlib.manager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -400,6 +401,10 @@ public class PlayerPresenter {
      * @param index
      */
     public void switchPlay(String url, int index) {
+
+
+
+
         if (mAssist != null) {
             mAssist.pause();
             mAssist.seekTo(0);

@@ -33,6 +33,7 @@ public class BaseApi {
     // 创建网络接口请求实例
     public static <T> T createApi(Class<T> service) {
         final String url = UrlConfig.BaseUrl;
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())

@@ -55,6 +55,7 @@ public class VideoListDto {
          * vod_name : 秘密情人
          * vod_actor : 莱西·沙伯特,安德鲁·W·沃克,彼得·麦克内尔,塔拉·尤伦,Catherine,Burdon,Kevin,Claydon,Richard,Young
          * vod_pic : https://tu.tianzuida.com/pic/upload/vod/2019-09-17/201909171568695975.jpg
+         * vod_pic_slide:upload/vod/20200105-1/905ecf54fdba49fa1853156225266089.jpg
          * vod_remarks : HD1280高清中英双字版
          * vod_area : 美国
          * vod_lang : 英语
@@ -73,6 +74,7 @@ public class VideoListDto {
         private String vod_name;
         private String vod_actor;
         private String vod_pic;
+        private String vod_pic_slide;
         private String vod_remarks;
         private String vod_area;
         private String vod_lang;
@@ -222,6 +224,10 @@ public class VideoListDto {
 
         public void setVod_play_url(String vod_play_url) {
             this.vod_play_url = vod_play_url;
+        }
+
+        public String getVod_pic_slide() {
+            return vod_pic_slide;
         }
     }
 }

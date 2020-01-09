@@ -1,9 +1,13 @@
 package com.movtalent.app.http;
 
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -21,11 +25,18 @@ public class ApiManager {
     private ApiManager() {
     }
     static {
+        //设置应用拦截器，可用于设置公共参数，头信息，日志拦截等
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+
+
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
         //添加应用拦截器
         client = new OkHttpClient.Builder()
                 //添加应用拦截器
                 .connectTimeout(35, TimeUnit.SECONDS)
                 .readTimeout(10, TimeUnit.SECONDS)
+                .addInterceptor(logging)
                 .retryOnConnectionFailure(true)
                 .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())
                 .hostnameVerifier(SSLSocketClient.getHostnameVerifier())

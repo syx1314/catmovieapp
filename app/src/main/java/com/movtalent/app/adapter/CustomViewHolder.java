@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide;
 import com.lib.common.util.DataInter;
 import com.movtalent.app.R;
 import com.movtalent.app.model.vo.CommonVideoVo;
+import com.movtalent.app.util.ImageLoader;
 import com.movtalent.app.view.OnlineDetailPageActivity;
 import com.ms.banner.holder.BannerViewHolder;
 
@@ -36,7 +37,7 @@ public class CustomViewHolder implements BannerViewHolder<CommonVideoVo> {
     @Override
     public void onBind(Context context, int position, CommonVideoVo data) {
         // 数据绑定
-        Glide.with(context).load(data.getMovPoster()).into(bannerImg);
+        ImageLoader.load(context,data.getBannderMovPoster(),bannerImg);
         bannerImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
