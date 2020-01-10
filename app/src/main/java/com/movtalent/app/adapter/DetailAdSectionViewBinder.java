@@ -15,6 +15,7 @@ import com.google.gson.Gson;
 import com.media.playerlib.widget.GlobalDATA;
 import com.movtalent.app.R;
 import com.media.playerlib.model.AdConfigDto;
+import com.movtalent.app.util.ImageLoader;
 
 import me.drakeet.multitype.ItemViewBinder;
 
@@ -41,7 +42,8 @@ public class DetailAdSectionViewBinder extends ItemViewBinder<DetailAdSection, D
         imageView.setLayoutParams(holder.viewGroup.getLayoutParams());
         AdConfigDto.DataBean dataBean = new Gson().fromJson(GlobalDATA.AD_INFO, AdConfigDto.DataBean.class);
         if (dataBean!=null&&dataBean.getAd_detail()!=null){
-            Glide.with(imageView.getContext()).load(dataBean.getAd_detail().getImg()).into(imageView);
+            ImageLoader.load(imageView.getContext(),dataBean.getAd_detail().getImg(),imageView);
+//            Glide.with(imageView.getContext()).load(dataBean.getAd_detail().getImg()).into(imageView);
 
             if (!TextUtils.isEmpty(dataBean.getAd_detail().getLink())){
                 holder.viewGroup.setOnClickListener(new View.OnClickListener() {

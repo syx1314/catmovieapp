@@ -16,6 +16,8 @@ import com.google.gson.Gson;
 import com.media.playerlib.widget.GlobalDATA;
 import com.movtalent.app.R;
 import com.media.playerlib.model.AdConfigDto;
+import com.movtalent.app.util.ImageLoader;
+
 import me.drakeet.multitype.ItemViewBinder;
 
 /**
@@ -34,20 +36,23 @@ public class SelfAdSectionViewBinder extends ItemViewBinder<SelfAdSection, SelfA
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull SelfAdSection selfAdSection) {
         ImageView imageView = new ImageView(holder.itemView.getContext());
+        imageView.setScaleType(ImageView.ScaleType.FIT_XY);
 
         if (!TextUtils.isEmpty(GlobalDATA.AD_INFO)){
             AdConfigDto.DataBean dataBean=  new Gson().fromJson(GlobalDATA.AD_INFO,AdConfigDto.DataBean.class);
             if (dataBean!=null&&dataBean.getAd_user_center()!=null){
-                Glide.with(holder.itemView.getContext()).load(dataBean.getAd_user_center().getImg()).into(imageView);
+                ImageLoader.load(imageView.getContext(),dataBean.getAd_user_center().getImg(),imageView);
             }
             if (dataBean!=null&&dataBean.getAd_user_center()!=null&&!TextUtils.isEmpty(dataBean.getAd_user_center().getLink())){
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Uri uri = Uri.parse(dataBean.getAd_splash().getLink());
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        imageView.getContext().startActivity(intent);
+                        if (!TextUtils.isEmpty(dataBean.getAd_splash().getLink())) {
+                            Uri uri = Uri.parse(dataBean.getAd_splash().getLink());
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            imageView.getContext().startActivity(intent);
+                        }
                     }
                 });
             }

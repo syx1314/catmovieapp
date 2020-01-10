@@ -21,6 +21,7 @@ import com.media.playerlib.model.AdConfigDto;
 import com.movtalent.app.model.vo.VideoTypeVo;
 import com.movtalent.app.presenter.SplashPresenter;
 import com.movtalent.app.presenter.iview.ITypeView;
+import com.movtalent.app.util.ImageLoader;
 import com.movtalent.app.util.ToastUtil;
 
 import butterknife.BindView;
@@ -89,17 +90,19 @@ public class SplashActivity extends AppCompatActivity implements ITypeView {
         if (!TextUtils.isEmpty(GlobalDATA.AD_INFO)) {
             AdConfigDto.DataBean dataBean = new Gson().fromJson(GlobalDATA.AD_INFO, AdConfigDto.DataBean.class);
             if (dataBean != null && dataBean.getAd_splash() != null && !TextUtils.isEmpty(dataBean.getAd_splash().getImg())) {
-                Glide.with(this).load(dataBean.getAd_splash().getImg()).into(splashAd);
+                ImageLoader.load(this,dataBean.getAd_splash().getImg(),splashAd);
                 if (TextUtils.isEmpty(dataBean.getAd_splash().getLink())) {
                     return;
                 }
                 splashAd.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Uri uri = Uri.parse(dataBean.getAd_splash().getLink());
-                        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                        startActivity(intent);
+                        if (!TextUtils.isEmpty(dataBean.getAd_splash().getLink())) {
+                            Uri uri = Uri.parse(dataBean.getAd_splash().getLink());
+                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(intent);
+                        }
                     }
                 });
             }

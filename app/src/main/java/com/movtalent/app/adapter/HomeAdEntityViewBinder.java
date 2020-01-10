@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import com.media.playerlib.widget.GlobalDATA;
 import com.movtalent.app.R;
 import com.media.playerlib.model.AdConfigDto;
+import com.movtalent.app.util.ImageLoader;
 
 import me.drakeet.multitype.ItemViewBinder;
 
@@ -44,68 +45,71 @@ public class HomeAdEntityViewBinder extends ItemViewBinder<HomeAdEntity, HomeAdE
         if (dataBean != null) {
             switch (homeAdEntity.getIndex()) {
                 case 0:
-                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_1().getImg()).into(imageView);
-                    if (dataBean.getAd_home_1()==null||TextUtils.isEmpty(dataBean.getAd_home_1().getLink())){
-                        return;
-                    }
+                    ImageLoader.load(imageView.getContext(),dataBean.getAd_home_1().getImg(),imageView);
+//                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_1().getImg()).into(imageView);
+
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Uri uri = Uri.parse(dataBean.getAd_home_1().getLink());
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            imageView.getContext().startActivity(intent);
+                            if (dataBean.getAd_home_1().getLink()!=null&&!TextUtils.isEmpty(dataBean.getAd_home_1().getLink())) {
+                                Uri uri = Uri.parse(dataBean.getAd_home_1().getLink());
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                imageView.getContext().startActivity(intent);
+                            }
                         }
                     });
                     imageView.setLayoutParams(holder.adContent.getLayoutParams());
                     holder.adContent.addView(imageView);
                     break;
                 case 1:
-                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_2().getImg()).into(imageView);
-                    if (dataBean.getAd_home_2()==null||TextUtils.isEmpty(dataBean.getAd_home_2().getLink())){
-                        return;
-                    }
-                    holder.itemView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Uri uri = Uri.parse(dataBean.getAd_home_2().getLink());
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            imageView.getContext().startActivity(intent);
-                        }
-                    });
+                    ImageLoader.load(imageView.getContext(),dataBean.getAd_home_2().getImg(),imageView);
+//                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_2().getImg()).into(imageView);
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                if (dataBean.getAd_home_2().getLink() != null && !TextUtils.isEmpty(dataBean.getAd_home_2().getLink())) {
+                                    Uri uri = Uri.parse(dataBean.getAd_home_2().getLink());
+                                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                    imageView.getContext().startActivity(intent);
+                                }
+                            }
+                        });
                     imageView.setLayoutParams(holder.adContent.getLayoutParams());
                     holder.adContent.addView(imageView);
                     break;
                 case 2:
-                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_3().getImg()).into(imageView);
-                    if (dataBean.getAd_home_3()==null||TextUtils.isEmpty(dataBean.getAd_home_3().getLink())){
-                        return;
-                    }
+                    ImageLoader.load(imageView.getContext(),dataBean.getAd_home_3().getImg(),imageView);
+//                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_3().getImg()).into(imageView);
+
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Uri uri = Uri.parse(dataBean.getAd_home_3().getLink());
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            imageView.getContext().startActivity(intent);
+                            if (dataBean.getAd_home_3().getLink() != null && !TextUtils.isEmpty(dataBean.getAd_home_3().getLink())) {
+                                Uri uri = Uri.parse(dataBean.getAd_home_3().getLink());
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                imageView.getContext().startActivity(intent);
+                            }
                         }
                     });
                     imageView.setLayoutParams(holder.adContent.getLayoutParams());
                     holder.adContent.addView(imageView);
                     break;
                 case 3:
-                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_4().getImg()).into(imageView);
-                    if (dataBean.getAd_home_4()==null||TextUtils.isEmpty(dataBean.getAd_home_4().getLink())){
-                        return;
-                    }
+                    ImageLoader.load(imageView.getContext(),dataBean.getAd_home_4().getImg(),imageView);
+//                    Glide.with(imageView.getContext()).load(dataBean.getAd_home_4().getImg()).into(imageView);
                     holder.itemView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Uri uri = Uri.parse(dataBean.getAd_home_4().getLink());
-                            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            imageView.getContext().startActivity(intent);
+                            if (dataBean.getAd_home_4().getLink()!=null&&!TextUtils.isEmpty(dataBean.getAd_home_4().getLink())) {
+                                Uri uri = Uri.parse(dataBean.getAd_home_4().getLink());
+                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                imageView.getContext().startActivity(intent);
+                            }
                         }
                     });
                     imageView.setLayoutParams(holder.adContent.getLayoutParams());

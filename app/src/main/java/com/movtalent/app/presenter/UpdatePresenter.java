@@ -31,7 +31,7 @@ public class UpdatePresenter {
                     public void onSuccess(UpdateDto data) {
 
                         //对版本进行判断，是否显示升级对话框
-                        if (data.getData().getVersionCode() > ApkUtil.getVersionCode(App.getContext())) {
+                        if (data.getData().getVersion().compareTo(ApkUtil.getVersionName(App.getContext()))>1) {
                             if (iUpdate!=null){
                                 iUpdate.loadDone(data);
                             }
