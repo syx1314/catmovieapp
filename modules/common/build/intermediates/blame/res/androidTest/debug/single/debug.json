@@ -12,12 +12,12 @@
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\GalleryPick-1.2.1.aar\\4f15285cd1547abbbdc7febe4d2afdab\\res\\mipmap-xhdpi-v4\\gallery_pick_camera.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_text_select_handle_middle_mtrl_light.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xxhdpi-v4\\abc_text_select_handle_middle_mtrl_light.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxxhdpi-v4_ic_launcher.png.flat",
@@ -28,12 +28,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\tablayout-android-1.0.1.aar\\2d967a011793306d2da09706bec6bf35\\res\\drawable-xxxhdpi-v4\\ic_launcher_background.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_btn_check_material.xml.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_btn_check_material.xml"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_design_snackbar_in.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\4eeaa4a705829dbe52883f3de04c2024\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_btn_check_material.xml.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_notification_template_big_media_narrow.xml.flat",
@@ -48,24 +48,24 @@
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-hdpi-v4\\abc_text_select_handle_middle_mtrl_dark.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_design_layout_snackbar.xml.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\c1dce451fd9252efe8ab38b08d4951b7\\res\\layout\\design_layout_snackbar.xml"
-    },
-    {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_ic_menu_overflow_material.xml.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_ic_menu_overflow_material.xml"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_design_layout_snackbar.xml.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\c1dce451fd9252efe8ab38b08d4951b7\\res\\layout\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_abc_slide_in_top.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\anim\\abc_slide_in_top.xml"
     },
     {
-        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4_gallery_pick_photo.png.flat",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\cc2a3d2b00b291d4a5a8fc36ca0daa45\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
     },
     {
-        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_abc_list_menu_item_radio.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_ic_commit_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_select_dialog_multichoice_material.xml.flat",
@@ -116,12 +116,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\cc2a3d2b00b291d4a5a8fc36ca0daa45\\res\\layout-v21\\notification_action.xml"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\color_abc_tint_btn_checkable.xml.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\color\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_abc_tooltip_enter.xml.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\anim\\abc_tooltip_enter.xml"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\color_abc_tint_btn_checkable.xml.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\color\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_ucrop_ic_cross.png.flat",
@@ -148,24 +148,24 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_ic_star_half_black_36dp.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ucrop_ic_next.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\f66523492a828403a5d315940eb75c25\\res\\drawable-xhdpi-v4\\ucrop_ic_next.png"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-xhdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ucrop_ic_next.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\f66523492a828403a5d315940eb75c25\\res\\drawable-xhdpi-v4\\ucrop_ic_next.png"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxhdpi-v4_gallery_pick_back_black.png.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\GalleryPick-1.2.1.aar\\4f15285cd1547abbbdc7febe4d2afdab\\res\\mipmap-xxhdpi-v4\\gallery_pick_back_black.png"
     },
     {
-        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_text_select_handle_right_mtrl_dark.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_text_select_handle_right_mtrl_dark.png"
+    },
+    {
+        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
@@ -212,20 +212,20 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\GalleryPick-1.2.1.aar\\743ff78e0003ccdcf787159ac316c7b4\\res\\mipmap-xxhdpi-v4\\gallery_pick_back_black.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
-    },
-    {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xxxhdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ucrop_ic_rotate.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\f66523492a828403a5d315940eb75c25\\res\\drawable-xhdpi-v4\\ucrop_ic_rotate.png"
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-xxhdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_ucrop_ic_rotate.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\f66523492a828403a5d315940eb75c25\\res\\drawable-xhdpi-v4\\ucrop_ic_rotate.png"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout__xpopup_part_shadow_popup_view.xml.flat",
@@ -256,16 +256,16 @@
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ucrop_activity_photobox.xml.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\b08e5173b02474ddd9dc5b1963af98e6\\res\\layout\\ucrop_activity_photobox.xml"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
-        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_ucrop_activity_photobox.xml.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\ucrop-2.2.0.aar\\b08e5173b02474ddd9dc5b1963af98e6\\res\\layout\\ucrop_activity_photobox.xml"
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-mdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\color_abc_background_cache_hint_selector_material_light.xml.flat",
@@ -288,12 +288,12 @@
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-xhdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
-    },
-    {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_loading_02.png.flat",
         "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\xrecyclerview-1.5.9.aar\\9711eb993c16f17ec83848232f08d4ae\\res\\drawable-hdpi-v4\\loading_02.png"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_ic_arrow_drop_right_black_24dp.xml.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\anim_abc_fade_in.xml.flat",
@@ -352,16 +352,16 @@
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\GalleryPick-1.2.1.aar\\4f15285cd1547abbbdc7febe4d2afdab\\res\\mipmap-xxxhdpi-v4\\gallery_pick_photo.png"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_layout_any_layer.xml.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\AnyLayer-2.3.0.aar\\ac34385edf83b72cbe7331d85cebcd1e\\res\\layout\\layout_any_layer.xml"
+        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
+        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
     },
     {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-xhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_abc_text_select_handle_left_mtrl_dark.png.flat",
-        "source": "C:\\Users\\Administrator\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\3f8befa7bb3b1e759fcafae7a3019bdc\\res\\drawable-hdpi-v4\\abc_text_select_handle_left_mtrl_dark.png"
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_layout_any_layer.xml.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\AnyLayer-2.3.0.aar\\ac34385edf83b72cbe7331d85cebcd1e\\res\\layout\\layout_any_layer.xml"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -396,12 +396,12 @@
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\c1dce451fd9252efe8ab38b08d4951b7\\res\\layout\\design_text_input_password_icon.xml"
     },
     {
-        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-ldrtl-xhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable_abc_item_background_holo_dark.xml.flat",
         "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "F:\\javacatmovieapp\\talentmov-master\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-ldrtl-xhdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\drawable-ldrtl-xhdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\catmovieappOnline\\modules\\common\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
