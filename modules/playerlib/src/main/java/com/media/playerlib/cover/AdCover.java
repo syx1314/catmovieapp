@@ -28,6 +28,7 @@ import com.kk.taurus.playerbase.player.IPlayer;
 import com.kk.taurus.playerbase.player.OnTimerUpdateListener;
 import com.kk.taurus.playerbase.receiver.BaseCover;
 import com.kk.taurus.playerbase.receiver.PlayerStateGetter;
+import com.media.playerlib.ImageLoader;
 import com.media.playerlib.R;
 import com.media.playerlib.manager.AdManager;
 import com.media.playerlib.manager.RxCountDown;
@@ -86,7 +87,8 @@ public class AdCover extends BaseCover implements OnTimerUpdateListener {
         //requestPause(null);
         ImageView imageView = new ImageView(getContext());
         imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        Glide.with(getContext()).load(adImgUrl).into(imageView);
+        ImageLoader.load(getContext(),adImgUrl,imageView);
+//        Glide.with(getContext()).load(adImgUrl).into(imageView);
         imageView.setLayoutParams(adContent.getLayoutParams());
         adContent.addView(imageView);
     }
