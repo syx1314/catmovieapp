@@ -25,6 +25,7 @@ import com.azhon.appupdate.listener.OnButtonClickListener;
 import com.azhon.appupdate.listener.OnDownloadListener;
 import com.azhon.appupdate.manager.DownloadManager;
 import com.azhon.appupdate.utils.ScreenUtil;
+import com.azhon.appupdate.utils.SharePreUtil;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
@@ -32,6 +33,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.lib.common.util.DataInter;
 import com.lxj.xpopup.XPopup;
+import com.lxj.xpopup.interfaces.OnConfirmListener;
 import com.movtalent.app.model.dto.PostDto;
 import com.movtalent.app.model.dto.UpdateDto;
 import com.movtalent.app.model.vo.VideoTypeVo;
@@ -46,6 +48,7 @@ import com.movtalent.app.view.PostPop;
 import com.movtalent.app.view.SelfTabFragment;
 import com.movtalent.app.view.ShareTabFragment;
 import com.movtalent.app.view.TopicTabFragment;
+import com.movtalent.app.view.UpdatePop;
 import com.next.easynavigation.view.EasyNavigationBar;
 
 import java.io.File;
@@ -171,7 +174,15 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void loadPost(PostDto dto) {
                 if (dto != null && dto.getData() != null && dto.getData().isShow()) {
-                    new XPopup.Builder(HomeActivity.this).asCustom(new PostPop(HomeActivity.this, dto)).show();
+//                    String show = SharePreUtil.getString(HomeActivity.this, "show","");
+//                    if (dto.getData().getContent()!=null&&!TextUtils.isEmpty(dto.getData().getContent())&&!show.equals(dto.getData().toString())) {
+//                        new XPopup.Builder(HomeActivity.this).asCustom(new PostPop(HomeActivity.this, dto)).show();
+//                        SharePreUtil.putString(HomeActivity.this,"show",dto.getData().toString());
+//                    }
+//                    String show = SharePreUtil.getString(HomeActivity.this, "show","");
+                    if (dto.getData().getContent()!=null&&!TextUtils.isEmpty(dto.getData().getContent())) {
+                        new XPopup.Builder(HomeActivity.this).asCustom(new PostPop(HomeActivity.this, dto)).show();
+                    }
                 }
             }
         });
@@ -224,15 +235,8 @@ public class HomeActivity extends AppCompatActivity {
             return;
         }
         if (!dto.getData().getDownloadUrl().endsWith(".apk")) {
-            /**
-             * 打开浏览器下载App
-             */
-            Intent intent = new Intent();
-            intent.setAction("android.intent.action.VIEW");
-            Uri content_url = Uri.parse(dto.getData().getDownloadUrl());
-            intent.setData(content_url);
-//        intent.setClassName("com.android.browser", "com.android.browser.BrowserActivity");
-            startActivity(intent);
+            new XPopup.Builder(HomeActivity.this).asCustom(new UpdatePop(HomeActivity.this, dto)).show();
+
             return;
         }
         /*

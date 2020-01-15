@@ -20,6 +20,7 @@ import android.view.ViewGroup;
 
 import com.lxj.xpopup.XPopup;
 import com.lib.common.util.DataInter;
+import com.movtalent.app.App_Config;
 import com.movtalent.app.R;
 import com.movtalent.app.adapter.vip.VipHeaderSection;
 import com.movtalent.app.adapter.vip.VipHeaderSectionViewBinder;
@@ -96,12 +97,12 @@ public class ShareTabFragment extends Fragment {
         vipHeaderSection = new VipHeaderSection(listener, "23");
 
         VipShareItemSectionn sectionn = new VipShareItemSectionn("分享下载二维码", R.drawable.share_code_drawable, "每日分享下载二维码", position -> {
-            final Bitmap thumbBmp = ((BitmapDrawable) getResources().getDrawable(R.drawable.share)).getBitmap();
+            final Bitmap thumbBmp = ((BitmapDrawable) getResources().getDrawable(R.drawable.app_download)).getBitmap();
             ShareContent mShareContent = new ShareContentPic(thumbBmp);
             showShareView(mShareContent);
         });
         VipShareItemSectionn sectionn2 = new VipShareItemSectionn("分享下载链接", R.drawable.share_link_drawable, "每日分享下载链接", position -> {
-            ShareContent mShareContent = new ShareContentText("https://fir.im/zjmov");
+            ShareContent mShareContent = new ShareContentText(App_Config.BASE_URL+"/appdownload/index.html");
             showShareView(mShareContent);
         });
         VipShareItemSectionn sectionn3 = new VipShareItemSectionn("分享影片到微信", R.drawable.share_weichat_drawable, "每日分享影片到微信或朋友圈", position -> {

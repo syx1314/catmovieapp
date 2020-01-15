@@ -273,7 +273,7 @@ public class OnlineDetailPageActivity extends AppCompatActivity implements IDeta
             @Override
             public void clickShare(String vodId) {
                 //分享
-                final Bitmap thumbBmp = ((BitmapDrawable) getResources().getDrawable(R.drawable.share)).getBitmap();
+                final Bitmap thumbBmp = ((BitmapDrawable) getResources().getDrawable(R.drawable.app_download)).getBitmap();
                 ShareContent mShareContent = new ShareContentPic(thumbBmp);
                 new XPopup.Builder(OnlineDetailPageActivity.this).asCustom(new BottomShareView(OnlineDetailPageActivity.this, mShareContent)).show();
             }
