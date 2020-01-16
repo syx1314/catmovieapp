@@ -23,15 +23,15 @@ public class App_Config {
     /**
      * 友盟统计key
      */
-    public static final String UMENKEY = "5d904dcb3fc195c774000b0e";
+    public static final String UMENKEY = "5e1fc0d4570df3f856000115";
     /**
      * 友盟统计app渠道名
      */
-    public static final String UMEN_APP_NAME = "movtalent";
+    public static final String UMEN_APP_NAME = "maoying";
     /**
      * 友盟推送app key
      */
-    public static final String UMEN_PUSH_KEY = "4b3893e95500500c2c2f88069e56da0c";
+    public static final String UMEN_PUSH_KEY = "3479db0ac68ecbe7a527dca49a2a16ff";
 
 
     /**

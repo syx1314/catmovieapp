@@ -13,6 +13,8 @@ import com.media.playerlib.PlayApp;
 import com.movtalent.app.util.MapBuilder;
 import com.simple.spiderman.SpiderMan;
 import com.tencent.smtt.sdk.QbSdk;
+import com.tencent.stat.StatConfig;
+import com.tencent.stat.StatService;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
@@ -50,10 +52,16 @@ public class App extends Application {
         //放在其他库初始化前
         SpiderMan.init(this).setTheme(R.style.SpiderManTheme_Dark);
         registerActivityLifecycleCallbacks(callbacks);
+        // [可选]设置是否打开debug输出，上线时请关闭，Logcat标签为"MtaSDK"
+        StatConfig.setDebugEnable(false);
+        // 基础统计API
+        StatService.registerActivityLifecycleCallbacks(this);
+
         //初始化友盟统计、推送
         //初始化友盟统计
         UMConfigure.init(this, App_Config.UMENKEY, App_Config.UMEN_APP_NAME, UMConfigure.DEVICE_TYPE_PHONE, App_Config.UMEN_PUSH_KEY);
         PushAgent mPushAgent = PushAgent.getInstance(this);
+        mPushAgent.setResourcePackageName(BuildConfig.APPLICATION_ID);
         mPushAgent.register(new IUmengRegisterCallback() {
             @Override
             public void onSuccess(String s) {

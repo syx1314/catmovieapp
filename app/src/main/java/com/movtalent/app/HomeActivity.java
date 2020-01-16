@@ -50,6 +50,7 @@ import com.movtalent.app.view.ShareTabFragment;
 import com.movtalent.app.view.TopicTabFragment;
 import com.movtalent.app.view.UpdatePop;
 import com.next.easynavigation.view.EasyNavigationBar;
+import com.umeng.message.PushAgent;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -105,7 +106,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         ButterKnife.bind(this);
 
-
+        PushAgent.getInstance(this).onAppStart();
         VideoTypeVo typeVo = (VideoTypeVo) getIntent().getSerializableExtra(DataInter.KEY.TYPE_ID);
         shareTabFragment = new ShareTabFragment();
         selfTabFragment = new SelfTabFragment();
@@ -301,7 +302,7 @@ public class HomeActivity extends AppCompatActivity {
 
         manager.setApkName(getString(R.string.app_name) + ".apk")
                 .setApkUrl(dto.getData().getDownloadUrl())
-                .setSmallIcon(R.mipmap.ticon2)
+                .setSmallIcon(R.mipmap.icon)
                 .setShowNewerToast(true)
                 .setConfiguration(configuration)
 //                .setDownloadPath(Environment.getExternalStorageDirectory() + "/AppUpdate")

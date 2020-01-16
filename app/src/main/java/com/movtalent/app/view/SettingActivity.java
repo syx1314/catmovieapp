@@ -33,6 +33,7 @@ import com.lib.common.util.DataInter;
 import com.lib.common.util.utils.DataCleanManager;
 import com.lxj.xpopup.interfaces.OnSelectListener;
 import com.media.playerlib.PlayApp;
+import com.movtalent.app.HomeActivity;
 import com.movtalent.app.R;
 import com.movtalent.app.adapter.setting.TextItemSection;
 import com.movtalent.app.adapter.setting.TextItemSectionViewBinder;
@@ -181,6 +182,11 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void checkVersion(UpdateDto dto) {
+        if (!dto.getData().getDownloadUrl().endsWith(".apk")) {
+            new XPopup.Builder(this).asCustom(new UpdatePop(this, dto)).show();
+
+            return;
+        }
         /*
          * 整个库允许配置的内容
          * 非必选
@@ -241,9 +247,9 @@ public class SettingActivity extends AppCompatActivity {
 
         manager = DownloadManager.getInstance(this);
 
-        manager.setApkName("极光影院.apk")
+        manager.setApkName(getString(R.string.app_name)+".apk")
                 .setApkUrl(dto.getData().getDownloadUrl())
-                .setSmallIcon(R.mipmap.ticon2)
+                .setSmallIcon(R.mipmap.icon)
                 .setShowNewerToast(true)
                 .setConfiguration(configuration)
 //                .setDownloadPath(Environment.getExternalStorageDirectory() + "/AppUpdate")

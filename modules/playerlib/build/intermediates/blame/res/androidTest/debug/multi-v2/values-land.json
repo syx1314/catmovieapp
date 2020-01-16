@@ -33,40 +33,6 @@
                     }
                 }
             ]
-        },
-        {
-            "outputFile": "F:\\javacatmovieapp\\talentmov-master\\modules\\playerlib\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values-land\\values-land.xml",
-            "map": [
-                {
-                    "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\design-26.0.0.aar\\c1dce451fd9252efe8ab38b08d4951b7\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "5",
-                        "endColumns": "12",
-                        "endOffsets": "232"
-                    },
-                    "to": {
-                        "startLines": "5",
-                        "startColumns": "4",
-                        "startOffsets": "264",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "441"
-                    }
-                },
-                {
-                    "source": "E:\\Android\\Android Studio\\gradle\\gradle-4.1-all\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\7831163f270e7b65254abf3dee4af154\\res\\values-land\\values-land.xml",
-                    "from": {
-                        "startLines": "2,3,4",
-                        "startColumns": "4,4,4",
-                        "startOffsets": "55,125,196",
-                        "endColumns": "69,70,67",
-                        "endOffsets": "120,191,259"
-                    }
-                }
-            ]
         }
     ]
 }
